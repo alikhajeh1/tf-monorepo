@@ -10,3 +10,4 @@ resource "aws_db_instance" "mysql" {
   engine         = "mysql"
   instance_class = "db.t3.medium"
 }
+
