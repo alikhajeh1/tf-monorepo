@@ -51,3 +51,4 @@ resource "azurerm_function_app" "my_function" {
   storage_account_name       = "fakestorageaccountname"
   storage_account_access_key = "fake_storage_account_access_key"
 }
+
