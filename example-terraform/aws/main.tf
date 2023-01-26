@@ -30,14 +30,8 @@ resource "aws_lambda_function" "hello_world" {
   memory_size   = 1024                      # <<<<< Try changing this to 512 to compare costs
 }
 
-module "s3_bucket" {
-  source = "github.com/alikhajeh1/private-tf-module.git"
-
-  bucket = "my-s3-bucket"
-  acl    = "private"
-
-  versioning = {
-    enabled = true
-  }
-
+module "ec2-instance" {
+  source  = "app.terraform.io/infracost-test/ec2-instance/aws"
+  version = "2.16.0"
+  # insert required variables here
 }
