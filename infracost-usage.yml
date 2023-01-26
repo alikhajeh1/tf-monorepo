@@ -7,5 +7,3 @@ resource_type_default_usage:
   aws_lambda_function:
     monthly_requests: 1000000
     request_duration_ms: 1000
-  google_dns_record_set:
-    monthly_queries: 100000000000 # Estimated monthly DNS queries
