@@ -31,7 +31,7 @@ resource "aws_lambda_function" "hello_world" {
 }
 
 module "s3_bucket" {
-  source = "https://github.com/alikhajeh1/private-tf-module.git"
+  source = "github.com/alikhajeh1/private-tf-module.git"
 
   bucket = "my-s3-bucket"
   acl    = "private"
