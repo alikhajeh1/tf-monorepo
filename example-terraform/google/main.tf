@@ -38,3 +38,4 @@ resource "google_dns_record_set" "frontend" {
   rrdatas = ["123.123.123.123]"]
   managed_zone = "zone"
 }
+
