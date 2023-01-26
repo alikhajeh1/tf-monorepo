@@ -1,0 +1,7 @@
+version: 0.1
+projects:
+  - path: tf-test-repo
+    name: test
+    include_all_paths: true
+    exclude_paths:
+      - infra/dev
