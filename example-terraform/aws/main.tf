@@ -6,9 +6,13 @@ provider "aws" {
   secret_key                  = "mock_secret_key"
 }
 
+variable "ins_type" {
+  type = string
+}
+
 resource "aws_instance" "web_app" {
   ami           = "ami-674cbc1e"
-  instance_type = "m5.8xlarge"              # <<<<< Try changing this to m5.8xlarge to compare the costs
+  instance_type = var.ins_type            # <<<<< Try changing this to m5.8xlarge to compare the costs
 
   root_block_device {
     volume_size = 50
@@ -30,8 +34,3 @@ resource "aws_lambda_function" "hello_world" {
   memory_size   = 1024                      # <<<<< Try changing this to 512 to compare costs
 }
 
-module "ec2-instance" {
-  source  = "app.terraform.io/infracost-test/ec2-instance/aws"
-  version = "2.16.0"
-  # insert required variables here
-}
